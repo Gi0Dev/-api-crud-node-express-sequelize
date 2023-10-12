@@ -5,7 +5,7 @@ const app = express();
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
- //Produto.sync({force: true}); //codigo para criar a tabela no banco de dados, deve ser utilizado só uma vez por tabela
+ Produto.sync({force: true}); //codigo para criar a tabela no banco de dados, deve ser utilizado só uma vez por tabela
 
 //criar um novo produto
 app.post('/addproduto', async (req, res) => {
