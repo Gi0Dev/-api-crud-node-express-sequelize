@@ -1,5 +1,7 @@
 const Produto = require('../models/produto');
 
+Produto.sync({force: true}); //codigo para criar a tabela no banco de dados, deve ser utilizado só uma vez por tabela
+
 exports.criarProduto = async (req, res) =>{
 
     try { 
